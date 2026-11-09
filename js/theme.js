@@ -3,11 +3,7 @@
   let theme = 'light';
   try {
     const saved = localStorage.getItem('portfolio-theme');
-    if (saved) {
-      theme = saved;
-    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      theme = 'dark';
-    }
+    if (saved === 'light' || saved === 'dark') theme = saved; // starts light; only the toggle switches to dark
   } catch (_) { }
   root.dataset.theme = theme;
   document.addEventListener('DOMContentLoaded', () => {
