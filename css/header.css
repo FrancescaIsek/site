@@ -1,0 +1,69 @@
+/* Shared header, matched to the supplied Muhid recording. */
+.portfolio-header { position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; padding: 20px 16px 0; pointer-events: none; }
+.portfolio-nav { display: flex; align-items: center; gap: 16px; background: none; border-radius: 0; box-shadow: none; padding: 0; pointer-events: auto; }
+.nav-segments { display: flex; align-items: center; padding: 4px; border-radius: 999px; background: #ebebeb; }
+.portfolio-nav a,.portfolio-nav .nav-resume { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: 999px; text-decoration: none; font: 500 18px/1 Inter,Arial,sans-serif; color: #898989; background: transparent; white-space: nowrap; transition: color 180ms ease,background 180ms ease; }
+.portfolio-nav a[aria-current],.portfolio-nav a[aria-current]:hover { color: #10121b; background: #fff; }
+.portfolio-nav a:hover,.portfolio-nav a:focus-visible { color: #10121b; background: transparent; }
+.nav-icon { display: inline-flex; width: 0; opacity: 0; overflow: hidden; transform: translateX(-5px) scale(.8); transition: width 280ms cubic-bezier(.22,1,.36,1),opacity 180ms ease,transform 280ms cubic-bezier(.22,1,.36,1),margin 280ms ease; }
+.nav-icon svg { flex: 0 0 18px; width: 18px; height: 18px; }
+.portfolio-nav :is(a[aria-current],a:hover,a:focus-visible,.nav-resume:hover,.nav-resume:focus-visible) .nav-icon { width: 18px; opacity: 1; margin-right: 8px; transform: translateX(0) scale(1); }
+.portfolio-nav .nav-resume { min-height: 56px; padding: 0 24px; background: #10121b; color: white; cursor: pointer; }
+.portfolio-nav a.nav-resume:hover,.portfolio-nav a.nav-resume:focus-visible { background: #10121b; color: white; }
+.mobile-menu-btn, .mobile-menu-overlay { display: none !important; }
+@media(max-width:767px) {
+  .portfolio-header { position: sticky; top: 0; z-index: 100; height: 56px; padding: 0 var(--m-gutter, 20px); background: #ffffff; pointer-events: auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid transparent; transition: border-color 180ms ease, box-shadow 180ms ease; }
+  .portfolio-header.scrolled { border-bottom-color: rgba(0,0,0,0.08); }
+  .portfolio-nav, .portfolio-header > .theme-toggle { display: none !important; }
+  .mobile-menu-btn { display: grid !important; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: #10121b; cursor: pointer; border-radius: 50%; pointer-events: auto; }
+  .mobile-menu-overlay { position: fixed; inset: 0; width: 100vw; height: 100vh; height: 100dvh; background: #ffffff; z-index: 200; display: flex !important; flex-direction: column; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity 200ms ease, transform 200ms ease; }
+  .mobile-menu-overlay.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .mobile-menu-top { height: 56px; padding: 0 var(--m-gutter, 20px); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,0,0,0.06); flex-shrink: 0; }
+  .mobile-menu-close { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: #10121b; cursor: pointer; border-radius: 50%; }
+  .mobile-menu-body { flex: 1; display: flex; flex-direction: column; justify-content: space-between; padding: 32px var(--m-gutter, 20px); overflow-y: auto; }
+  .mobile-menu-links { display: flex; flex-direction: column; gap: 8px; }
+  .mobile-menu-links a { font: 500 28px/1.3 Inter,-apple-system,sans-serif; letter-spacing: -0.03em; color: #10121b; text-decoration: none; padding: 10px 0; min-height: 44px; display: flex; align-items: center; }
+  .mobile-menu-actions { display: flex; flex-direction: column; gap: 20px; padding-top: 24px; }
+  .mobile-theme-row { display: flex; align-items: center; justify-content: space-between; font: 500 16px Inter,sans-serif; color: #737373; }
+  .mobile-theme-row .theme-toggle { display: grid !important; opacity: 1 !important; pointer-events: auto !important; }
+  .mobile-resume-btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; background: #10121b; color: #ffffff; border-radius: 999px; text-decoration: none; font: 500 16px Inter,sans-serif; }
+}
+@media(min-width:768px) and (max-width:900px) { .case-page .portfolio-header,.portfolio-header { padding: 14px 16px 0; } .case-page .portfolio-nav,.portfolio-nav { flex-wrap: nowrap; gap: 8px; } .case-page .portfolio-nav a,.portfolio-nav a,.portfolio-nav .nav-resume { font-size: 13px; padding: 0 12px; min-height: 44px; } .portfolio-nav .nav-resume { min-height: 48px; } .nav-icon svg { width: 15px; height: 15px; flex-basis: 15px; } .portfolio-nav :is(a[aria-current],a:hover,a:focus-visible,.nav-resume:hover,.nav-resume:focus-visible) .nav-icon { width: 15px; margin-right: 5px; } }
+@media(prefers-reduced-motion:reduce) { .portfolio-nav a,.nav-icon { transition: none; } }
+
+/* Phone menu fixes: an old dark style for every <nav> was painting a black box behind
+   the menu links. Reset it, open the menu instantly (no fade, no page showing through)
+   and replace the browser's blue tap flash with a quiet pressed state. */
+@media(max-width:767px) {
+  html { -webkit-tap-highlight-color: transparent; }
+  body .portfolio-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 0 var(--m-gutter, 20px); }
+  .mobile-menu-links { padding: 0; background: none; border-radius: 0; box-shadow: none; align-items: stretch; gap: 8px; }
+  .mobile-menu-links a { padding: 10px 0; background: none; border-radius: 0; font-size: 28px; color: #10121b; }
+  .mobile-menu-links a:hover, .mobile-menu-links a:active { background: none; color: #10121b; }
+  .mobile-menu-overlay, .mobile-menu-overlay.is-open { transition: none; transform: none; }
+  .mobile-menu-btn, .mobile-menu-close { margin-left: auto; width: 40px; height: 40px; border-radius: 50%; background: #f4f4f5; color: #10121b; }
+  /* Three fine lines that fold into an X while the menu is open. The button stays on
+     top of the menu, so the same button opens and closes it. */
+  .mobile-menu-btn { position: relative; z-index: 210; }
+  .mobile-menu-close { display: none !important; }
+  .burger { position: relative; display: block; width: 18px; height: 12px; }
+  .burger i { position: absolute; left: 0; width: 100%; height: 1.5px; border-radius: 2px; background: currentColor; transition: transform 220ms ease, opacity 160ms ease, top 220ms ease; }
+  .burger i:nth-child(1) { top: 0; }
+  .burger i:nth-child(2) { top: 5.25px; }
+  .burger i:nth-child(3) { top: 10.5px; }
+  .mobile-menu-btn[aria-expanded="true"] .burger i:nth-child(1) { top: 5.25px; transform: rotate(45deg); }
+  .mobile-menu-btn[aria-expanded="true"] .burger i:nth-child(2) { opacity: 0; }
+  .mobile-menu-btn[aria-expanded="true"] .burger i:nth-child(3) { top: 5.25px; transform: rotate(-45deg); }
+  .mobile-menu-btn:active, .mobile-menu-close:active { background: #e9e9eb; }
+  [data-theme="dark"] .mobile-menu-btn, [data-theme="dark"] .mobile-menu-close { background: #26262b; }
+  [data-theme="dark"] .mobile-menu-links a, [data-theme="dark"] .mobile-menu-links a:active { color: #f0f0f2; }
+  [data-theme="dark"] .mobile-menu-btn:active, [data-theme="dark"] .mobile-menu-close:active { background: #2a2a2f; }
+}
+/* No line under the header, on any page, scrolled or not. */
+.portfolio-header, .portfolio-header.scrolled, [data-theme="dark"] .portfolio-header.scrolled { border-bottom-color: transparent !important; box-shadow: none !important; }
+.mobile-menu-top, [data-theme="dark"] .mobile-menu-top { border-bottom: 0 !important; }
+/* Case pages shrink every nav link; keep the phone menu links full size everywhere. */
+@media(max-width:767px) {
+  .mobile-menu-overlay .mobile-menu-links { flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; }
+  .mobile-menu-overlay .mobile-menu-links a { font-size: 28px; line-height: 1.3; padding: 10px 0; }
+}

@@ -1,0 +1,61 @@
+/* Apex only. Layout comes from case-study.css (shared with Sprout); this file adds the grey stages and the walkthrough player. */
+.apex-page { --apex-stage: #ececee; --apex-bar: #f7f7f8; --apex-dot: #d4d4d8; }
+[data-theme="dark"] .apex-page { --apex-stage: #232328; --apex-bar: #2e2e33; --apex-dot: #4a4a52; }
+
+.apex-page .case-intro h1 { white-space: nowrap; }
+.story-copy p + p { margin-top: 22px; }
+
+.apex-opening { margin: 0; padding: 56px 0 56px 56px; border-radius: 16px; background: var(--apex-stage); overflow: hidden; }
+.apex-opening img { display: block; width: 100%; height: auto; filter: drop-shadow(0 22px 34px rgb(20 22 40 / 14%)); }
+
+/* One screen per row: a browser window on a muted grey stage. */
+.walkthrough { margin: 0; }
+.wt-stage { position: relative; padding: clamp(20px, 5vw, 64px); border-radius: 16px; background: var(--apex-stage); }
+.wt-window { overflow: hidden; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgb(0 0 0 / 6%), 0 28px 56px -24px rgb(20 22 40 / 32%); }
+.wt-bar { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 14px; background: var(--apex-bar); border-bottom: 1px solid rgb(0 0 0 / 6%); }
+.wt-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--apex-dot); }
+.wt-bar span { width: min(36%, 260px); height: 18px; margin: 0 auto; border-radius: 6px; background: rgb(0 0 0 / 5%); }
+[data-theme="dark"] .wt-bar span { background: rgb(255 255 255 / 7%); }
+.wt-view { position: relative; aspect-ratio: 1434 / 1068; overflow: hidden; background: #fff; }
+.wt-camera { position: absolute; inset: 0; transform-origin: 0 0; transition: transform 1150ms cubic-bezier(.65, 0, .35, 1); will-change: transform; }
+.wt-shot { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 420ms ease; user-select: none; }
+.wt-shot.is-on { opacity: 1; }
+/* The group menu is shown on its own, over whichever list is underneath. */
+.wt-menu { clip-path: polygon(87.4% 20.6%, 97.7% 20.6%, 97.7% 25.9%, 98.2% 25.9%, 98.2% 51.8%, 79.1% 51.8%, 79.1% 25.9%, 87.4% 25.9%); }
+
+.wt-cursor { position: absolute; left: 70%; top: 80%; width: 1.55%; aspect-ratio: 12 / 18; opacity: 0; pointer-events: none; z-index: 2;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 18'%3E%3Cpath d='M1 1v14.2l3.5-3.4 2.3 5.2 2.3-1-2.3-5.1H12L1 1Z' fill='%23111' stroke='%23fff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  filter: drop-shadow(0 1px 1.5px rgb(0 0 0 / 30%));
+  transition-property: left, top, opacity, transform; transition-timing-function: cubic-bezier(.45, 0, .2, 1); transform-origin: 10% 6%; }
+.wt-cursor.is-on { opacity: 1; }
+.wt-cursor.is-pressed { transform: scale(.82); transition-duration: 120ms; }
+.wt-cursor::after { content: ""; position: absolute; left: -110%; top: -70%; width: 220%; aspect-ratio: 1; border-radius: 50%; border: 2px solid rgb(26 102 255 / 55%); opacity: 0; transform: scale(.3); }
+.wt-cursor.is-pressed::after { animation: wt-click 520ms ease-out; }
+@keyframes wt-click { 0% { opacity: 1; transform: scale(.3); } 100% { opacity: 0; transform: scale(1.4); } }
+
+.wt-toggle { position: absolute; right: 14px; bottom: 14px; width: 32px; height: 32px; border: 0; border-radius: 50%; background: rgb(255 255 255 / 85%); color: #3a3a3f; cursor: pointer; box-shadow: 0 1px 4px rgb(0 0 0 / 10%); opacity: 0; transition: opacity 200ms ease; }
+.wt-stage:hover .wt-toggle, .wt-toggle:focus-visible, .walkthrough.is-paused .wt-toggle { opacity: 1; }
+.wt-toggle::before { content: ""; position: absolute; inset: 0; margin: auto; width: 10px; height: 11px; border-inline: 3px solid currentColor; box-sizing: border-box; }
+.walkthrough.is-paused .wt-toggle::before { width: 0; height: 0; border-inline: 0; border-block: 6px solid transparent; border-left: 9px solid currentColor; margin-left: 12px; }
+.wt-toggle:focus-visible { outline: 2px solid #1a66ff; outline-offset: 2px; }
+[data-theme="dark"] .wt-toggle { background: rgb(46 46 51 / 92%); color: #eee; }
+[data-theme="dark"] .walkthrough figcaption { color: #bcbcc4; }
+
+.more-projects { margin-top: 0; }
+.apex-page .closing-context { margin-top: 112px; }
+
+@media (max-width: 760px) {
+  .apex-page .case-intro h1 { white-space: normal; }
+  .apex-opening { padding: 24px 0 24px 20px; }
+  .wt-stage { padding: 14px; border-radius: 14px; }
+  .wt-bar { height: 22px; gap: 5px; padding: 0 9px; }
+  .wt-bar i { width: 7px; height: 7px; }
+  .wt-bar span { height: 11px; }
+  .wt-toggle { opacity: 1; width: 28px; height: 28px; right: 8px; bottom: 8px; }
+  .story-intro h2 br { display: none; }
+  .apex-page .closing-context { margin-top: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wt-camera, .wt-shot, .wt-cursor { transition: none; }
+  .wt-cursor, .wt-toggle { display: none; }
+}

@@ -1,0 +1,20 @@
+/* DigitalAjo only. Grey stage, browser bar and pause button come from apex-presentation.css. */
+.ajo-tour { margin: 0; }
+.ajo-view { position: relative; aspect-ratio: 1440 / 900; overflow: hidden; background: #fff; }
+.ajo-page-img { position: absolute; left: 0; top: 0; width: 100%; height: auto; transition: transform 1500ms cubic-bezier(.65, 0, .35, 1), opacity 350ms ease; will-change: transform; }
+.ajo-tour figcaption, .ajo-shot figcaption, .ajo-phones figcaption { margin-top: 22px; font-size: 14px; line-height: 1.6; color: #626262; text-align: center; }
+.ajo-shot { margin: 0; }
+.ajo-shot .wt-window img { display: block; width: 100%; height: auto; }
+
+.ajo-phones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 44px 32px 28px; border-radius: 16px; background: var(--apex-stage); }
+.ajo-phones figure { margin: 0; min-width: 0; }
+.ajo-phone { width: min(100%, 220px); margin: 0 auto; padding: 6px; border-radius: 34px; background: #15161a; box-shadow: 0 0 0 1px rgb(0 0 0 / 8%), 0 26px 44px -24px rgb(20 22 40 / 45%); }
+.ajo-phone img { display: block; width: 100%; height: auto; border-radius: 28px; }
+[data-theme="dark"] .ajo-page figcaption { color: #bcbcc4; }
+
+@media (max-width: 760px) {
+  .ajo-phones { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 24px 14px; gap: 22px 12px; }
+  .ajo-phone { padding: 4px; border-radius: 24px; }
+  .ajo-phone img { border-radius: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .ajo-page-img { transition: none; } .ajo-tour .wt-toggle { display: none; } }

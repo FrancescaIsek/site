@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BranchOut Social App Case Study &amp; UI Design — Francesca Isek</title>
+  <meta name="description" content="BranchOut is a campus app for finding events. Helping students find someone to go with, I designed the matching layer on top of the existing mobile app.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BranchOut Social App Case Study &amp; UI Design — Francesca Isek">
+  <meta property="og:description" content="BranchOut is a campus app for finding events. Helping students find someone to go with, I designed the matching layer on top of the existing mobile app.">
+  <meta property="og:image" content="https://YOUR-DOMAIN/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://YOUR-DOMAIN/branchout.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://YOUR-DOMAIN/branchout.html">
+<link rel="stylesheet" href="css/hero.css"><link rel="stylesheet" href="css/case-study.css"><link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/cursor.css?v=2">
+  <link rel="stylesheet" href="css/apex-presentation.css">
+  <link rel="stylesheet" href="css/branchout.css">
+  <script src="js/theme.js"></script>
+  <script src="js/cursor.js?v=1" defer></script>
+  <script src="js/branchout-walkthrough.js" defer></script>
+</head>
+<body class="case-page apex-page bo-page">
+<header class="portfolio-header"><a class="header-name" href="index.html" aria-label="Francesca, homepage">Francesca <span aria-hidden="true">👋</span></a><nav class="portfolio-nav" aria-label="Portfolio"><div class="nav-segments"><a href="index.html#selected-work" aria-current="page"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m4 16 3-9 9-3-3 9-9 3Z"/><path d="m4 16 6-6"/><circle cx="11" cy="9" r="1.5"/></svg></span>Work</a><a href="about.html"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="6" r="3"/><path d="M4 17v-2a6 6 0 0 1 12 0v2"/></svg></span>About</a><a href="mailto:francescaisek@gmail.com"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="11" rx="3"/><path d="m4 7 6 4 6-4"/></svg></span>Contact</a></div><a class="nav-resume" href="https://docs.google.com/document/d/1GN4dvYvGVPUgsONXQ1iWZ2yxoBfLpgicq2tAjBCVAWI/edit?tab=t.0" target="_blank" rel="noopener noreferrer"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h7l4 4v12H5Z"/><path d="M12 2v5h4M8 10h5M8 13h5"/></svg></span>Résumé</a></nav><button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 15.3A8.5 8.5 0 0 1 8.7 4 8.5 8.5 0 1 0 20 15.3Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav-overlay"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div id="mobile-nav-overlay" class="mobile-menu-overlay" hidden aria-hidden="true">
+      <div class="mobile-menu-top">
+        <a class="header-name" href="index.html" aria-label="Francesca, homepage">Francesca <span aria-hidden="true">👋</span></a>
+        <button class="mobile-menu-close" type="button" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/>
+            <line x1="6" y1="18" x2="18" y2="6"/>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-body">
+        <nav class="mobile-menu-links">
+          <a href="index.html#selected-work">Work</a>
+          <a href="about.html">About</a>
+          <a href="mailto:francescaisek@gmail.com">Contact</a>
+        </nav>
+        <div class="mobile-menu-actions">
+          <div class="mobile-theme-row">
+            <span>Theme</span>
+            <button class="theme-toggle mobile-theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><svg
+                class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                <path d="M20 15.3A8.5 8.5 0 0 1 8.7 4 8.5 8.5 0 1 0 20 15.3Z" />
+              </svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
+              </svg></button>
+          </div>
+          <a class="mobile-resume-btn"
+            href="https://docs.google.com/document/d/1GN4dvYvGVPUgsONXQ1iWZ2yxoBfLpgicq2tAjBCVAWI/edit?tab=t.0"
+            target="_blank" rel="noopener noreferrer">Résumé</a>
+        </div>
+      </div>
+    </div></header>
+<main class="case-main">
+<a class="case-back" href="index.html#selected-work">← Back to Work</a>
+<section class="case-intro" aria-labelledby="case-title">
+<div><h1 id="case-title">BranchOut</h1><p class="case-tagline">From what’s on to who’s free.</p></div>
+<div><p class="case-summary">BranchOut is a campus app for finding events. The update was about people: helping students find someone to go with. I designed the matching layer on top of the existing app.</p><a class="store-link" href="https://play.google.com/store/apps/details?id=com.campustree.app&amp;pcampaignid=web_share" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>Download on Google Play</a></div>
+</section>
+<dl class="case-facts"><div><dt>Project</dt><dd>Campus social app</dd></div><div><dt>Role</dt><dd>Freelance UI designer</dd></div><div><dt>Design</dt><dd>Matching, status &amp; group chat</dd></div></dl>
+
+<div class="case-opening bo-opening-duo">
+<figure class="walkthrough" data-phone data-demo="room">
+<div class="wt-stage"><div class="phone"><div class="ph-view"><div class="ph-camera">
+<img class="ph-shot is-on" data-state="home" src="assets/projects/branchout/walkthrough/home.webp" width="860" alt="Updated home with Find Your Match.">
+<img class="ph-shot" data-state="join-room" src="assets/projects/branchout/walkthrough/join-room.webp" width="860" loading="lazy" alt="Join a Match Room sheet: what, where and who with.">
+<img class="ph-shot" data-state="match-room" src="assets/projects/branchout/walkthrough/match-room.webp" width="860" loading="lazy" alt="Match Room: the plan with an I’m down button, then room members.">
+<span class="ph-touch" aria-hidden="true"></span>
+</div></div></div>
+<button class="wt-toggle" type="button" aria-label="Pause walkthrough"></button></div>
+<figcaption>Join a match room.</figcaption>
+</figure>
+<figure class="walkthrough" data-phone data-demo="status">
+<div class="wt-stage"><div class="phone"><div class="ph-view"><div class="ph-camera">
+<img class="ph-shot is-on" data-state="profile" src="assets/projects/branchout/walkthrough/profile.webp" width="860" alt="Profile with a Set Your Status card and a Let’s Meet Up button.">
+<img class="ph-shot" data-state="status-pick" src="assets/projects/branchout/walkthrough/status-pick.webp" width="860" loading="lazy" alt="Tell us what you’re up to: doing this, available now or available later.">
+<img class="ph-shot" data-state="available-now" src="assets/projects/branchout/walkthrough/available-now.webp" width="860" loading="lazy" alt="I’m Available Now form.">
+<img class="ph-shot" data-state="review" src="assets/projects/branchout/walkthrough/review.webp" width="860" loading="lazy" alt="Review and post, with audience and visibility set to Friends.">
+<span class="ph-touch" aria-hidden="true"></span>
+</div></div></div>
+<button class="wt-toggle" type="button" aria-label="Pause walkthrough"></button></div>
+<figcaption>Post that you’re free.</figcaption>
+</figure>
+</div>
+
+<section class="story-section" aria-labelledby="why-title">
+<div class="story-intro"><h2 id="why-title">Events weren’t the problem. <br>Going alone was.</h2><div class="story-copy"><p>BranchOut already showed students what was happening on campus. The update was about <em>who</em>: showing people who are free, and what they have in common, so it’s easier to say yes.</p><p>The home now leads with Find Your Match, ahead of the event lists.</p></div></div>
+<div class="bo-row" style="--n:2"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/home-before.webp" width="860" loading="lazy" alt="The original home: search, event filters and recommended events."></div></div><figcaption>Before: events first.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/home.webp" width="860" loading="lazy" alt="The updated home with a Find Your Match banner."></div></div><figcaption>After: Find Your Match leads.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="room-title">
+<div class="story-intro"><h2 id="room-title">A room for <br>every plan.</h2><div class="story-copy"><p>Students join a match room by answering three short questions: what they want to do, where, and who with.</p><p>The room puts the plan at the top with one <em>I’m down</em> button. The people come below in compact cards, so more of them fit on screen.</p></div></div>
+<div class="bo-row" style="--n:2"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/join-room.webp" width="860" loading="lazy" alt="Join a Match Room sheet."></div></div><figcaption>Three questions to join.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/match-room.webp" width="860" loading="lazy" alt="Match Room with the plan and room members."></div></div><figcaption>The plan first, then the people.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="event-title">
+<div class="story-intro"><h2 id="event-title">Already going? <br>See who else is.</h2><div class="story-copy"><p>On an event, Match Me lists attendees you might know. Each card gives a reason to trust a near-stranger: a group in common, mutual friends, shared interests and events you’ve both been to.</p><p>Tapping a person shows their icebreaker questions.</p></div></div>
+<div class="bo-row" style="--n:3"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/event.webp" width="860" loading="lazy" alt="Event detail with event chat, not interested and highlights."></div></div><figcaption>The updated event page.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/attendees.webp" width="860" loading="lazy" alt="Attendees you might know, each with things in common."></div></div><figcaption>Attendees you might know.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/attendee-jane.webp" width="860" loading="lazy" alt="Jane Cooper’s card with her icebreaker questions."></div></div><figcaption>Icebreakers before hello.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="status-title">
+<div class="story-intro"><h2 id="status-title">Say you’re free, <br>on your terms.</h2><div class="story-copy"><p>From their profile, students can set a status. They choose whether they’re doing something, free now or free later, and each option asks only what fits it: a plan and a time, how long they’re free, or a date.</p><p>The last questions stay the same across all three, so the forms feel familiar.</p></div></div>
+<div class="bo-row" style="--n:3"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/status-pick.webp" width="860" loading="lazy" alt="Tell us what you’re up to, with three options."></div></div><figcaption>Pick what fits.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/doing-this.webp" width="860" loading="lazy" alt="I’m Doing This form."></div></div><figcaption>Doing something.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/available-later.webp" width="860" loading="lazy" alt="I’m Available Later form."></div></div><figcaption>Free later.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="audience-title">
+<div class="story-intro"><h2 id="audience-title">You decide <br>who sees it.</h2><div class="story-copy"><p>Before anything is shared, students choose the audience: friends, specific people or their groups. Choices appear as chips that are easy to remove, and Proceed stays inactive until something is picked.</p></div></div>
+<div class="bo-row bo-comps" style="--n:2"><figure class="bo-comp"><img src="assets/projects/branchout/walkthrough/popup-people.webp" width="860" height="752" loading="lazy" alt="Specific People sheet with Justin, Maya and Molly as chips."><figcaption>Specific people.</figcaption></figure><figure class="bo-comp"><img src="assets/projects/branchout/walkthrough/popup-groups.webp" width="860" height="752" loading="lazy" alt="Your Groups sheet with The Alpha team selected."><figcaption>Your groups.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="match-title">
+<div class="story-intro"><h2 id="match-title">One tap, <br>then a clear answer.</h2><div class="story-copy"><p>When a match comes in, the card shows why it’s a match before asking for anything. Accepting takes one tap and a confirmation, and the button then says what’s happening: “Sent, hang on a second.”</p></div></div>
+<div class="bo-row" style="--n:3"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/match.webp" width="860" loading="lazy" alt="A new match card for Let’s go Hiking."></div></div><figcaption>A match that explains itself.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/confirm.webp" width="860" loading="lazy" alt="Confirm sheet with an I’m Down button."></div></div><figcaption>One confirmation.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/sent.webp" width="860" loading="lazy" alt="Confirm sheet showing Sent, hang on a second."></div></div><figcaption>Then a clear status.</figcaption></figure></div>
+</section>
+<section class="story-section bo-split" aria-labelledby="feed-title">
+<div class="bo-split-visual"><div class="bo-long"><img src="assets/projects/branchout/walkthrough/feed.webp" width="860" height="3516" loading="lazy" alt="Feed with my events, a new match, an activity invite, activity updates and recommended events."></div></div>
+<div class="bo-split-copy"><h2 id="feed-title">Every answer <br>has a place.</h2><p>The feed collects everything that comes back: new matches, invites, who accepted and who’s unavailable right now. Each card leads to the next step, whether that’s seeing details or going to the group.</p>
+<figure class="bo-comp"><img src="assets/projects/branchout/walkthrough/invite.webp" width="764" height="530" loading="lazy" alt="Activity invite card for Cafeteria Meetup with a See details button."><figcaption>An invite, ready to answer.</figcaption></figure>
+<figure class="bo-comp"><img src="assets/projects/branchout/walkthrough/declined.webp" width="896" height="748" loading="lazy" alt="Cafeteria Meet up Declined card with a See details button."><figcaption>A decline still has a next step.</figcaption></figure></div>
+</section>
+<section class="story-section" aria-labelledby="group-title">
+<div class="story-intro"><h2 id="group-title">From yes <br>to hello.</h2><div class="story-copy"><p>Creating a group takes a name, a date, a time and the people. Create stays inactive until someone is added.</p><p>The chat opens with icebreaker questions pinned at the top, so nobody has to think of the first message. Group options sit one tap away.</p></div></div>
+<div class="bo-row" style="--n:3"><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/group-selected.webp" width="860" loading="lazy" alt="Create Group with a friend selected and Create active."></div></div><figcaption>Name it, add people.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/chat.webp" width="860" loading="lazy" alt="Group chat with icebreaker questions pinned at the top."></div></div><figcaption>Icebreakers come first.</figcaption></figure><figure><div class="phone"><div class="ph-view"><img src="assets/projects/branchout/walkthrough/chat-options.webp" width="860" loading="lazy" alt="Group options sheet with edit, invite, leave and a share link with QR code."></div></div><figcaption>Options one tap away.</figcaption></figure></div>
+</section>
+
+<section class="case-context closing-context" aria-labelledby="closing-title"><h2 id="closing-title">Lowering the cost <br>of saying yes.</h2><div class="context-copy"><p>Each part of the update removes one small reason not to go: not knowing who’s free, not knowing them, and not knowing what to say first.</p><a class="store-link" href="https://play.google.com/store/apps/details?id=com.campustree.app&amp;pcampaignid=web_share" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16h12"/></svg>Download on Google Play</a></div></section>
+<section class="more-projects" aria-labelledby="more-projects-title"><h2 id="more-projects-title">More projects</h2><div class="work-grid"><a class="project lernly" href="https://www.behance.net/gallery/258002377/Lernly-Brand-Identity-Guidelines">
+          <div class="preview"><img src="assets/projects/lernly/lernly-0.webp"
+              alt="Lernly’s lime wordmark and stepped motif on its dark-green guidelines cover." loading="lazy"><img
+              class="next-frame" src="assets/projects/lernly/lernly-1.webp" alt="" loading="lazy"></div>
+          <div class="project-caption">
+            <h3>Lernly</h3>
+            <div class="project-summary">
+              <p>A visual identity and brand guidelines for a learning platform.</p>
+            </div>
+          </div><span class="card-arrow" aria-hidden="true">↗</span>
+        </a><a class="project apex" href="apex-presentation.html">
+          <div class="preview">
+            <video data-autoplay muted loop playsinline preload="none" poster="assets/projects/apex/apex-thumbnail-poster.webp"
+              aria-label="Apex Dashboard: tasks regrouped by status.">
+              <source src="assets/projects/apex/apex-thumbnail.mp4" type="video/mp4">
+              <source src="assets/projects/apex/apex-thumbnail.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="project-caption">
+            <h3>Apex Dashboard</h3>
+            <div class="project-summary">
+              <p>A task-management dashboard exploration for viewing, grouping, and acting on work.</p>
+            </div>
+          </div><span class="card-arrow" aria-hidden="true">↗</span>
+        </a></div></section>
+<div class="case-end"><a href="index.html#selected-work">← Back to Work</a></div>
+</main>
+<footer class="case-footer"><span>Francesca Isek</span><a href="mailto:francescaisek@gmail.com">Let’s talk ↗</a></footer>
+<script src="js/mobile-menu.js" defer></script>
+<script src="js/lazy-video.js" defer></script>
+</body></html>
