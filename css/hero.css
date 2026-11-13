@@ -1067,8 +1067,8 @@ h1 span {
 .testimonial blockquote p {
   margin: 0;
   color: #414141;
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.6;
   letter-spacing: -.015em;
 }
 
@@ -1654,8 +1654,8 @@ h1 span {
     width: 100%;
   }
   .testimonial blockquote p {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
     letter-spacing: -0.011em;
   }
   .testimonial figcaption {
