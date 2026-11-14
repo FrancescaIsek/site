@@ -1867,12 +1867,15 @@ h1 span {
 #name { letter-spacing: -0.028em; word-spacing: 0.04em; }
 @media (max-width: 767px) { #name { letter-spacing: -0.028em; word-spacing: 0.02em; font-size: 25px; } }
 
-/* Phones: no hero reveal animation (no motion on mobile); headline and buttons show straight away. */
+/* Desktop: one selection reveals headline + buttons. Phones: selection reveals only the buttons. */
+@media (min-width: 768px) { .selection-buttons { display: none !important; } }
 @media (max-width: 767px) {
-  .selection { display: none !important; animation: none !important; }
-  .reveal-content { animation: none !important; opacity: 1 !important; visibility: visible !important; }
+  .action-reveal > .selection { display: none !important; }
+  .intro .hero-actions { position: relative; padding: 5px; margin-top: 14px; }
 }
-
-/* The selection box now draws around the hero buttons only; the headline shows straight away. */
-.intro .action-reveal { margin-top: 14px; }
-.intro .action-reveal .hero-actions { margin-top: 0; }
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .reveal-content { animation: none !important; opacity: 1 !important; visibility: visible !important; }
+  .hero-actions a { animation: reveal-actions 2.15s .25s both; }
+  .action-reveal:focus-within .hero-actions a { animation: none; opacity: 1; visibility: visible; }
+  .action-reveal:focus-within .selection-buttons { display: none; }
+}
