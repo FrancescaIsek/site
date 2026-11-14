@@ -1866,3 +1866,13 @@ h1 span {
 /* Hero headline: looser tracking and word spacing so it can breathe. */
 #name { letter-spacing: -0.028em; word-spacing: 0.04em; }
 @media (max-width: 767px) { #name { letter-spacing: -0.028em; word-spacing: 0.02em; font-size: 25px; } }
+
+/* Phones: no hero reveal animation (no motion on mobile); headline and buttons show straight away. */
+@media (max-width: 767px) {
+  .selection { display: none !important; animation: none !important; }
+  .reveal-content { animation: none !important; opacity: 1 !important; visibility: visible !important; }
+}
+
+/* The selection box now draws around the hero buttons only; the headline shows straight away. */
+.intro .action-reveal { margin-top: 14px; }
+.intro .action-reveal .hero-actions { margin-top: 0; }
