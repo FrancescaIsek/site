@@ -1126,7 +1126,7 @@ h1 span {
   margin: 0 0 16px;
   font-size: 18px;
   font-weight: 500;
-  color: #858585;
+  color: #666666;
 }
 
 .contact-card h2 {
@@ -1811,7 +1811,7 @@ h1 span {
 .xp .stack-icons img, .xp .stack-icons .adobe { width: 25px; height: 25px; }
 .xp .stack-icons .adobe { font-size: 15px; border-radius: 5px; }
 .xp-card { padding: 28px 30px 12px; border-radius: 20px; background: #fff; }
-.xp-label { margin: 0 0 8px; font: 500 13px/1.3 Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #8a8a90; }
+.xp-label { margin: 0 0 8px; font: 500 13px/1.3 Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #6b6b72; }
 .xp-timeline { position: relative; margin: 0; padding: 0; list-style: none; }
 .xp-timeline::before { content: ""; position: absolute; left: 5px; top: 34px; bottom: 34px; width: 1px; background: #dcdce0; }
 .xp-timeline li { position: relative; display: grid; grid-template-columns: 20px 1fr auto; gap: 0 14px; align-items: center; padding: 18px 0; border-bottom: 1px solid #efeff1; }
@@ -1855,3 +1855,14 @@ h1 span {
   .xp-timeline strong { font-size: 16.5px; }
   .xp-timeline time { font-size: 13.5px; }
 }
+
+/* Phone: keep the hero headline inside the screen so the page never scrolls sideways. */
+@media (max-width: 767px) {
+  .hero .intro { width: 100%; max-width: 100%; min-width: 0; }
+  .hero .action-reveal { width: 100%; max-width: 100%; box-sizing: border-box; }
+  #name { font-size: 28px; overflow-wrap: break-word; }
+}
+
+/* Hero headline: looser tracking and word spacing so it can breathe. */
+#name { letter-spacing: -0.028em; word-spacing: 0.04em; }
+@media (max-width: 767px) { #name { letter-spacing: -0.028em; word-spacing: 0.02em; font-size: 25px; } }

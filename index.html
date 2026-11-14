@@ -45,7 +45,7 @@
   }
   </script>
 
-  <link rel="stylesheet" href="css/hero.css?v=mobile-flat-1">
+  <link rel="stylesheet" href="css/hero.css?v=mobile-flat-6">
   <script src="js/portrait.js?v=stack-mobile-1" defer></script>
   <link rel="stylesheet" href="css/header.css?v=links-6">
   <link rel="stylesheet" href="css/theme.css?v=links-7">
@@ -72,7 +72,7 @@
               fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="10" cy="6" r="3" />
               <path d="M4 17v-2a6 6 0 0 1 12 0v2" />
-            </svg></span>About</a><a href="mailto:francescaisek@gmail.com"><span class="nav-icon"
+            </svg></span>About</a><a href="#contact"><span class="nav-icon"
             aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="5" width="14" height="11" rx="3" />
@@ -93,7 +93,7 @@
         <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" />
       </svg></button><button class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
       aria-controls="mobile-nav-overlay"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
-    <div id="mobile-nav-overlay" class="mobile-menu-overlay" hidden aria-hidden="true">
+    <div id="mobile-nav-overlay" class="mobile-menu-overlay" hidden>
       <div class="mobile-menu-top">
         <a class="header-name" href="/" aria-label="Francesca, homepage">Francesca <span
             aria-hidden="true">👋</span></a>
@@ -109,7 +109,7 @@
         <nav class="mobile-menu-links">
           <a href="/#selected-work">Work</a>
           <a href="about.html">About</a>
-          <a href="mailto:francescaisek@gmail.com">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
         <div class="mobile-menu-actions">
           <div class="mobile-theme-row">
@@ -139,9 +139,9 @@
             <img class="studio" src="assets/images/home/francesca-studio.webp"
               alt="Francesca seated in a pink suit, resting her chin on her hand." width="940" height="1175"
               fetchpriority="high">
-            <img class="outdoors" src="assets/images/home/francesca-outdoors.webp"
+            <img class="outdoors" data-src="assets/images/home/francesca-outdoors.webp"
               alt="Francesca smiling over her shoulder beside palms in a red dress." width="930" height="1240"
-              aria-hidden="true">
+              aria-hidden="true" fetchpriority="low" decoding="async">
           </div>
           <span class="caption">In the studio</span>
           <button type="button" hidden aria-controls="photos"></button>
@@ -179,11 +179,10 @@
       <div class="work-grid">
         <a class="project apex" href="apex-presentation.html">
           <div class="preview">
-            <video autoplay muted loop playsinline preload="metadata"
+            <video data-autoplay muted loop playsinline preload="none"
               poster="assets/projects/apex/apex-thumbnail-poster.webp"
               aria-label="Apex Dashboard: tasks regrouped by status.">
               <source src="assets/projects/apex/apex-thumbnail.mp4" type="video/mp4">
-              <source src="assets/projects/apex/apex-thumbnail.webm" type="video/webm">
             </video>
           </div>
           <div class="project-caption">
@@ -226,7 +225,6 @@
               poster="assets/projects/eventme/eventme-thumbnail-poster.webp"
               aria-label="EventMe: from the home screen to an event and its tickets.">
               <source src="assets/projects/eventme/eventme-thumbnail.mp4" type="video/mp4">
-              <source src="assets/projects/eventme/eventme-thumbnail.webm" type="video/webm">
             </video>
           </div>
           <div class="project-caption">
@@ -310,22 +308,34 @@
         <div class="screens-track desktop">
           <div class="screens-set">
             <div class="screen-frame web-frame"><img class="web-shot"
-                src="assets/images/screens/web-digitalajo-hero.webp"
+                src="assets/images/screens/web-digitalajo-hero-800.webp"
+                srcset="assets/images/screens/web-digitalajo-hero-800.webp 800w, assets/images/screens/web-digitalajo-hero.webp 1400w"
+                sizes="(max-width: 767px) 86vw, 800px"
                 alt="DigitalAjo landing page on desktop, with the mobile version alongside." width="1400" height="1050"
                 decoding="async"><img class="web-phone" src="assets/images/screens/web-digitalajo-phone.webp" alt=""
                 width="400" height="870" decoding="async"></div>
-            <div class="screen-frame web-frame"><img class="web-shot" src="assets/images/screens/web-apex-status.webp"
+            <div class="screen-frame web-frame"><img class="web-shot"
+                src="assets/images/screens/web-apex-status-800.webp"
+                srcset="assets/images/screens/web-apex-status-800.webp 800w, assets/images/screens/web-apex-status.webp 1400w"
+                sizes="(max-width: 767px) 86vw, 800px"
                 alt="Apex AR tasklist grouped by status: Completed, In Progress and Not Started." width="1400"
                 height="1050" decoding="async"></div>
             <div class="screen-frame web-frame"><img class="web-shot"
-                src="assets/images/screens/web-digitalajo-steps.webp"
+                src="assets/images/screens/web-digitalajo-steps-800.webp"
+                srcset="assets/images/screens/web-digitalajo-steps-800.webp 800w, assets/images/screens/web-digitalajo-steps.webp 1400w"
+                sizes="(max-width: 767px) 86vw, 800px"
                 alt="DigitalAjo How it works section: create your circle, invite your people, pay in and get paid out."
                 width="1400" height="1050" decoding="async"></div>
-            <div class="screen-frame web-frame"><img class="web-shot" src="assets/images/screens/web-apex-subtasks.webp"
+            <div class="screen-frame web-frame"><img class="web-shot"
+                src="assets/images/screens/web-apex-subtasks-800.webp"
+                srcset="assets/images/screens/web-apex-subtasks-800.webp 800w, assets/images/screens/web-apex-subtasks.webp 1400w"
+                sizes="(max-width: 767px) 86vw, 800px"
                 alt="Apex AR tasklist with subtasks expanded under each application." width="1400" height="1050"
                 decoding="async"></div>
             <div class="screen-frame web-frame"><img class="web-shot"
-                src="assets/images/screens/web-digitalajo-download.webp"
+                src="assets/images/screens/web-digitalajo-download-800.webp"
+                srcset="assets/images/screens/web-digitalajo-download-800.webp 800w, assets/images/screens/web-digitalajo-download.webp 1400w"
+                sizes="(max-width: 767px) 86vw, 800px"
                 alt="DigitalAjo download section: Take full control of your group savings." width="1400" height="1050"
                 decoding="async"></div>
           </div>
@@ -455,7 +465,7 @@
       </template>
     </section>
   </main>
-  <footer class="contact-footer" aria-labelledby="contact-title">
+  <footer class="contact-footer" id="contact" aria-labelledby="contact-title">
     <div class="contact-card">
       <p class="contact-label">Reach me</p>
       <h2 id="contact-title">Have a product that<br>needs a designer?</h2>
@@ -506,6 +516,7 @@
   <script src="js/mobile-menu.js" defer></script>
   <script src="js/footer.js"></script>
   <script src="js/lazy-video.js" defer></script>
+  <script>addEventListener("load", () => { const i = document.querySelector("img.outdoors[data-src]"); if (i) i.src = i.dataset.src; });</script>
 </body>
 
 </html>

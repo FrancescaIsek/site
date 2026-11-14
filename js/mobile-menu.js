@@ -9,14 +9,14 @@
     overlay.hidden = false;
     void overlay.offsetHeight;
     overlay.classList.add("is-open");
-    overlay.setAttribute("aria-hidden", "false");
+    
     button.setAttribute("aria-expanded", "true");
     button.setAttribute("aria-label", "Close menu");
     document.body.style.overflow = "hidden";
   }
   function close() {
     overlay.classList.remove("is-open");
-    overlay.setAttribute("aria-hidden", "true");
+    
     button.setAttribute("aria-expanded", "false");
     button.setAttribute("aria-label", "Open menu");
     document.body.style.overflow = "";
