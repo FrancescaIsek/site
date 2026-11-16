@@ -88,8 +88,17 @@
   </style>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    try {
+      var p = new URLSearchParams(location.search);
+      if (p.has("me")) localStorage.setItem("va-disable", "1");
+      if (p.has("notme")) localStorage.removeItem("va-disable");
+      if (!localStorage.getItem("va-disable")) {
+        var s = document.createElement("script");
+        s.src = "/_vercel/insights/script.js";
+        document.head.appendChild(s);
+      }
+    } catch (e) {}
   </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
