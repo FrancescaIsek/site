@@ -1742,14 +1742,14 @@ h1 span {
 /* Laptop row: each website sits flat on a light panel inside the same grey frame
    and 20px corners as the phones. The page runs off the bottom edge, like a browser. */
 .desktop .screens-set { gap: 28px; padding-right: 28px; }
-.desktop .screen-frame { position: relative; width: 600px; height: auto; aspect-ratio: 16 / 10; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #f4f4f5; box-shadow: none; overflow: hidden; }
-.desktop .screen-frame .web-shot { position: absolute; top: 36px; left: 40px; width: calc(100% - 80px); height: auto; object-fit: initial; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 10px 30px rgba(20,20,30,.08); }
+.desktop .screen-frame { position: relative; width: 760px; height: auto; aspect-ratio: 16 / 10; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #f4f4f5; box-shadow: none; overflow: hidden; }
+.desktop .screen-frame .web-shot { position: absolute; top: 20px; left: 20px; width: calc(100% - 40px); height: auto; object-fit: initial; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 10px 30px rgba(20,20,30,.08); }
 .desktop .screen-frame .web-phone { position: absolute; right: 26px; bottom: -70px; width: 128px; height: auto; border: 4px solid #17171a; border-radius: 24px; box-shadow: 0 14px 30px rgba(20,20,30,.18); }
 .screens-track + .screens-track { margin-top: 28px; }
 [data-theme="dark"] .desktop .screen-frame { border-color: #3a3a41; background: #26262b; }
 @media (max-width: 767px) {
-  .desktop .screen-frame { width: 300px; border-width: 5px; border-radius: 20px; }
-  .desktop .screen-frame .web-shot { top: 20px; left: 22px; width: calc(100% - 44px); border-radius: 3px; }
+  .desktop .screen-frame { width: 340px; border-width: 5px; border-radius: 20px; }
+  .desktop .screen-frame .web-shot { top: 12px; left: 12px; width: calc(100% - 24px); border-radius: 3px; }
   .desktop .screen-frame .web-phone { width: 66px; right: 14px; bottom: -36px; border-width: 3px; border-radius: 13px; }
 }
 
@@ -1769,7 +1769,7 @@ h1 span {
   .screens-track + .screens-track { margin-top: 20px; }
   .screens-set { gap: 16px; padding-right: 16px; }
   .screens-track.held { animation-play-state: paused; }
-  .desktop .screen-frame { flex: 0 0 300px; }
+  .desktop .screen-frame { flex: 0 0 340px; }
   .stack-experience { padding-top: 0; padding-bottom: 0; }
   .stack-icons { grid-template-columns: repeat(5, 40px); justify-content: space-between; gap: 18px 0; margin-top: 16px; }
   .stack-icons li { width: 40px; height: 40px; }
