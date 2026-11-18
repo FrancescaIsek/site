@@ -786,7 +786,7 @@ h1 span {
 }
 
 .screens.ready .screens-track {
-  animation: gallery-scroll 46s linear infinite;
+  animation: gallery-scroll 11s linear infinite;
 }
 
 .screens.ready .screens-track:nth-child(2) {
@@ -1726,8 +1726,8 @@ h1 span {
    The row pauses while the pointer is on it and carries on when it leaves. */
 .screens-window { padding-top: 8px; }
 .screens-track.mobile { padding-bottom: 8px; }
-.mobile .screens-set { gap: 28px; padding-right: 28px; }
-.mobile .screen-frame { --screen-w: 240px; width: var(--screen-w); height: auto; aspect-ratio: 384 / 834; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #cfd0d4; box-shadow: none; overflow: hidden; }
+.mobile .screens-set { gap: 18px; padding-right: 18px; }
+.mobile .screen-frame { --screen-w: 220px; width: var(--screen-w); height: auto; aspect-ratio: 384 / 834; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #cfd0d4; box-shadow: none; overflow: hidden; }
 .mobile .screen-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
 .screens.ready .screens-track:hover { animation-play-state: paused; }
 [data-theme="dark"] .mobile .screen-frame { border-color: #3a3a41; background: #3a3a41; box-shadow: none; }
@@ -1735,16 +1735,16 @@ h1 span {
   .screens-window { padding-top: 4px; }
   .screens-window { scroll-padding-left: var(--m-gutter, 16px); }
   .screens-track.mobile { padding-bottom: 4px; }
-  .mobile .screens-set { gap: 16px; padding-right: 0; }
-  .mobile .screen-frame { flex: 0 0 200px; width: 200px; max-width: none; height: auto; padding: 0; border-width: 5px; border-radius: 20px; scroll-snap-align: start; }
+  .mobile .screens-set { gap: 12px; padding-right: 0; }
+  .mobile .screen-frame { flex: 0 0 195px; width: 195px; max-width: none; height: auto; padding: 0; border-width: 5px; border-radius: 20px; scroll-snap-align: start; }
   .mobile .screen-frame img { border-radius: 15px; }
 }
 /* Laptop row: each website sits flat on a light panel inside the same grey frame
    and 20px corners as the phones. The page runs off the bottom edge, like a browser. */
-.desktop .screens-set { gap: 28px; padding-right: 28px; }
-.desktop .screen-frame { position: relative; width: 760px; height: auto; aspect-ratio: 16 / 10; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #f4f4f5; box-shadow: none; overflow: hidden; }
+.desktop .screens-set { gap: 18px; padding-right: 18px; }
+.desktop .screen-frame { position: relative; width: 560px; height: auto; aspect-ratio: 16 / 10; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #f4f4f5; box-shadow: none; overflow: hidden; }
 .desktop .screen-frame .web-shot { position: absolute; top: 20px; left: 20px; width: calc(100% - 40px); height: auto; object-fit: initial; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,.05), 0 10px 30px rgba(20,20,30,.08); }
-.desktop .screen-frame .web-phone { position: absolute; right: 26px; bottom: -70px; width: 128px; height: auto; border: 4px solid #17171a; border-radius: 24px; box-shadow: 0 14px 30px rgba(20,20,30,.18); }
+.desktop .screen-frame .web-phone { position: absolute; right: 22px; bottom: -52px; width: 96px; height: auto; border: 4px solid #17171a; border-radius: 24px; box-shadow: 0 14px 30px rgba(20,20,30,.18); }
 .screens-track + .screens-track { margin-top: 28px; }
 [data-theme="dark"] .desktop .screen-frame { border-color: #3a3a41; background: #26262b; }
 @media (max-width: 767px) {
@@ -1767,7 +1767,7 @@ h1 span {
   .screens-window { overflow: hidden; padding: 0; background: none; scroll-snap-type: none; }
   .screens-track, .screens-track.desktop { display: flex; gap: 0; width: max-content; padding: 4px 0; }
   .screens-track + .screens-track { margin-top: 20px; }
-  .screens-set { gap: 16px; padding-right: 16px; }
+  .screens-set { gap: 12px; padding-right: 12px; }
   .screens-track.held { animation-play-state: paused; }
   .desktop .screen-frame { flex: 0 0 340px; }
   .stack-experience { padding-top: 0; padding-bottom: 0; }
@@ -1878,4 +1878,13 @@ h1 span {
   .hero-actions a { animation: reveal-actions 2.15s .25s both; }
   .action-reveal:focus-within .hero-actions a { animation: none; opacity: 1; visibility: visible; }
   .action-reveal:focus-within .selection-buttons { display: none; }
+}
+
+/* Both rows move at the same speed (about 500px a second). Each row's loop time
+   is its length divided by that speed, so they're set separately. */
+.screens.ready .screens-track.desktop { animation-duration: 8.1s; }
+.screens.ready .screens-track.mobile { animation-duration: 3.8s; }
+@media (max-width: 767px) {
+  .screens.ready .screens-track.desktop { animation-duration: 4.9s; }
+  .screens.ready .screens-track.mobile { animation-duration: 3.3s; }
 }
