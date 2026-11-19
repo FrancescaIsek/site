@@ -1727,7 +1727,7 @@ h1 span {
 .screens-window { padding-top: 8px; }
 .screens-track.mobile { padding-bottom: 8px; }
 .mobile .screens-set { gap: 18px; padding-right: 18px; }
-.mobile .screen-frame { --screen-w: 220px; width: var(--screen-w); height: auto; aspect-ratio: 384 / 834; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #cfd0d4; box-shadow: none; overflow: hidden; }
+.mobile .screen-frame { --screen-w: 250px; width: var(--screen-w); height: auto; aspect-ratio: 384 / 834; flex: none; padding: 0; border: 6px solid #cfd0d4; border-radius: 20px; background: #cfd0d4; box-shadow: none; overflow: hidden; }
 .mobile .screen-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
 .screens.ready .screens-track:hover { animation-play-state: paused; }
 [data-theme="dark"] .mobile .screen-frame { border-color: #3a3a41; background: #3a3a41; box-shadow: none; }
@@ -1736,7 +1736,7 @@ h1 span {
   .screens-window { scroll-padding-left: var(--m-gutter, 16px); }
   .screens-track.mobile { padding-bottom: 4px; }
   .mobile .screens-set { gap: 12px; padding-right: 0; }
-  .mobile .screen-frame { flex: 0 0 195px; width: 195px; max-width: none; height: auto; padding: 0; border-width: 5px; border-radius: 20px; scroll-snap-align: start; }
+  .mobile .screen-frame { flex: 0 0 210px; width: 210px; max-width: none; height: auto; padding: 0; border-width: 5px; border-radius: 20px; scroll-snap-align: start; }
   .mobile .screen-frame img { border-radius: 15px; }
 }
 /* Laptop row: each website sits flat on a light panel inside the same grey frame

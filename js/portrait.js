@@ -137,8 +137,8 @@ function fillGallery() {
     }
   });
 }
-// One steady speed on every screen size: 130 pixels a second for both rows.
-const GALLERY_SPEED = 130;
+// One steady speed on every screen size: 150 pixels a second for both rows.
+const GALLERY_SPEED = 150;
 function setGallerySpeed() {
   galleryTracks.forEach(track => {
     const loop = track.scrollWidth / 2;
